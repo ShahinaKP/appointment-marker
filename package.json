@@ -1,0 +1,41 @@
+{
+  "name": "calendar_app",
+  "version": "1.0.0",
+  "description": "Appoinment creation page",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rimraf build/*",
+    "prod": "cross-env NODE_ENV=production webpack",
+    "build": "npm run clean && npm run prod",
+    "start": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahinaKP/CalendarApp_Ang1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahinaKP/CalendarApp_Ang1/issues"
+  },
+  "homepage": "https://github.com/ShahinaKP/CalendarApp_Ang1#readme",
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.1.8",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.16.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.0",
+    "image-webpack-loader": "^3.2.0",
+    "node-sass": "^4.5.0",
+    "rimraf": "^2.6.0",
+    "sass-loader": "^6.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

@@ -1,3 +1,8 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Filename: footer.directive.js
+Description:
+    - Footer directive
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 function appointmentFooter() {
     return {
         restrict: 'E',

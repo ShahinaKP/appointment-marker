@@ -6,10 +6,10 @@ Description:
 function appointmentHeader() {
     return {
         restrict: 'E',
-        templateUrl: './src/app/directives/header/header.html'
+        templateUrl: './src/app/components/header/header.html'
     }
 }
 
-export default angular.module('AppointmentMarker.directives.appointmentHeader', [])
+export default angular.module('AppointmentMarker.components.appointmentHeader', [])
     .directive('appointmentHeader', appointmentHeader)
     .name;

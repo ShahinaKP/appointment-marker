@@ -6,10 +6,10 @@ Description:
 function appointmentFooter() {
     return {
         restrict: 'E',
-        templateUrl: './src/app/directives/footer/footer.html'
+        templateUrl: './src/app/components/footer/footer.html'
     }
 }
 
-export default angular.module('AppointmentMarker.directives.appointmentFooter', [])
+export default angular.module('AppointmentMarker.components.appointmentFooter', [])
     .directive('appointmentFooter', appointmentFooter)
     .name;

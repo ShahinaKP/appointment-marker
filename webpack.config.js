@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 module.exports = {
-    entry: './app/app.js',
+    entry: './src/app.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build')
@@ -57,13 +57,13 @@ module.exports = {
         }]
     },
     devServer: {
-        contentBase: path.join(__dirname, '/'),
-        publicPath: '/build/',
-        hot: true,
-        inline: true,
-        compress: true,
-        port: 3030,
-        historyApiFallback: true
+        port: 8080,
+        host: 'localhost',
+        historyApiFallback: true,
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: 1000
+        }
     },
     plugins: [
         new webpack.BannerPlugin({
@@ -76,6 +76,7 @@ module.exports = {
             allChunks: true,
             disable: process.env.NODE_ENV === 'development'
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({ template: './src/index.html' })
     ]
 };

@@ -1,0 +1,22 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Filename: main.scss
+Description:
+    - Appointment mark common styles adn imports
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+@import 'variables';
+@import 'header';
+@import 'navbar';
+@import 'calendar';
+@import 'table';
+@import 'footer';
+html,
+body {
+  font-family: $master-font;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../fonts/ProximaNova-Regular.eot') format('eot'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('ttf');
+}

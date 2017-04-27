@@ -1,0 +1,18 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Filename: _footer.scss
+Description:
+    - Footer styles
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+footer {
+  position: fixed;
+  display: table;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
+  background: $footer-background;
+  text-align: center;
+  p {
+    color: $footer-text;
+    font-size: $footer-size;
+  }
+}

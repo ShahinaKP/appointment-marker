@@ -1,0 +1,24 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Filename: _header.scss
+Description:
+    - Header styles
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+header {
+  color: $header-text;
+  border-bottom: 1px solid $header-border;
+  text-align: center;
+  height: 60px;
+  img {
+    float: left;
+  }
+  h1 {
+    font-size: $header-size;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  a {
+    vertical-align: middle;
+    display: inline-block;
+    float: left;
+  }
+}

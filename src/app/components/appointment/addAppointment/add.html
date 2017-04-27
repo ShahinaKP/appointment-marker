@@ -1,0 +1,41 @@
+<section class="wrapper">
+  <h1>Add appointment form</h1>
+  <form name="addAppForm" class="appointmentForm" ng-submit="addAppForm.$valid && appointment.appointmentSubmit()" novalidate>
+    <div>
+      <label>Date
+      </label>
+      <input type="date" name="date" ng-model="appointment.appointmentForm.date" required>
+    </div>
+    <p ng-if="addAppForm.$submitted && addAppForm.date.$error.required" class="validation-error">Required</p>
+    <p ng-if="addAppForm.$submitted && addAppForm.date.$error.pattern" class="validation-error">Pattern Required</p>
+    <div>
+      <label>Start Time
+      </label>
+      <input type="time" name="start_time" ng-model="appointment.appointmentForm.start_time" required>
+    </div>
+    <p ng-if="addAppForm.$submitted && addAppForm.start_time.$error.required" class="validation-error">Required</p>
+    <p ng-if="addAppForm.$submitted && addAppForm.start_time.$error.pattern" class="validation-error">Pattern Required</p>
+    <div>
+      <label>End Time
+      </label>
+      <input type="time" id="end_time" name="end_time" ng-model="appointment.appointmentForm.end_time" placeholder="HH:mm:ss" min="00:00:00" max="24:00:00" required />
+    </div>
+    <p ng-if="addAppForm.$submitted && addAppForm.end_time.$error.required" class="validation-error">Required</p>
+    <p ng-if="addAppForm.$submitted && addAppForm.end_time.$error.pattern" class="validation-error">Pattern Required</p>
+    <div>
+      <label>Title
+      </label>
+      <input type="text" name="title" ng-model="appointment.appointmentForm.title" required>
+    </div>
+    <p ng-if="addAppForm.$submitted && addAppForm.title.$error.required" class="validation-error">Required</p>
+    <p ng-if="addAppForm.$submitted && addAppForm.title.$error.pattern" class="validation-error">Pattern Required</p>
+    <div>
+      <label>Description
+      </label>
+      <input type="text" name="description" ng-model="appointment.appointmentForm.description" required>
+    </div>
+    <p ng-if="addAppForm.$submitted && addAppForm.description.$error.required" class="validation-error">Required</p>
+    <p ng-if="addAppForm.$submitted && addAppForm.description.$error.pattern" class="validation-error">Pattern Required</p>
+    <input type="submit" ng-class="{ 'editUpdate':addAppForm.$valid} " value="Submit">
+  </form>
+</section>

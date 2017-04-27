@@ -1,0 +1,14 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $header-border;
+  li {
+    border-right: 1px solid $header-border;
+    padding: 10px;
+    a {
+      cursor: pointer;
+    }
+  }
+}

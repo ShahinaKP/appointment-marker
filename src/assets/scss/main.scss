@@ -3,11 +3,13 @@ Filename: main.scss
 Description:
     - Appointment mark common styles adn imports
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 @import 'variables';
 @import 'header';
 @import 'navbar';
 @import 'calendar';
 @import 'table';
+@import 'form';
 @import 'footer';
 html,
 body {
@@ -19,4 +21,9 @@ body {
 @font-face {
   font-family: 'ProximaNova-Regular';
   src: url('../fonts/ProximaNova-Regular.eot') format('eot'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('ttf');
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
 }

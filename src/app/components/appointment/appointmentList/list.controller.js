@@ -1,12 +1,11 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Filename: list.controller.js
 Description:
-    - List appointment Controller
+    - Appointment list Controller
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 export default class ListController {
-    constructor() {
-        console.log("List appointment Controller");
+    constructor(appointmentService) {
+        this.appointmentService = appointmentService;
+        this.appointmentList = this.appointmentService.getAppointments();
     }
-
-
 }

@@ -29,31 +29,41 @@ module.exports = {
             test: /\.(gif|png|jpe?g|svg)$/i,
             exclude: /node_modules/,
             use: [{
-                    loader: 'file-loader',
-                    options: {
-                        hash: 'sha512',
-                        digest: 'hex',
-                        name: '[hash].[ext]'
-                    }
-                }, {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        gifsicle: {
-                            interlaced: false
-                        },
-                        optipng: {
-                            optimizationLevel: 4
-                        },
-                        mozjpeg: {
-                            progressive: true
-                        }
+                loader: 'file-loader',
+                options: {
+                    hash: 'sha512',
+                    digest: 'hex',
+                    name: '[hash].[ext]'
+                }
+            }, {
+                loader: 'image-webpack-loader',
+                options: {
+                    gifsicle: {
+                        interlaced: false
+                    },
+                    optipng: {
+                        optimizationLevel: 4
+                    },
+                    mozjpeg: {
+                        progressive: true
                     }
                 }
-            ]
+            }]
         }, {
             test: /\.(woff|woff2|eot|ttf|svg)$/,
             exclude: /node_modules/,
             use: 'url-loader?limit=1024&name=fonts/[name].[ext]'
+        }, {
+            test: /\.json$/,
+            loader: 'json-loader'
+        }, {
+            test: /\.html$/,
+            use: [{
+                loader: 'html-loader',
+                options: {
+                    minimize: true
+                }
+            }]
         }]
     },
     devServer: {

@@ -1,1 +1,24 @@
-
+<section class="wrapper">
+<h1>List appointment</h1>
+<table  st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th st-sort="date">Date</th>
+		<th st-sort="start_time">Start Time</th>
+		<th st-sort="end_time">End End</th>
+		<th st-sort="title">Title</th>
+		<th st-sort="description">Description</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="row in list.appointmentList track by $index">
+		<td>{{row.date | date:'MMM d, y'}}</td>
+		<td>{{row.start_time | date:"h:mma"}}</td>
+		<td>{{row.end_time | date: "h:mma"}}</td>
+		<td>{{row.title}}</td>
+		<td>{{row.description}}</td>
+	</tr>
+	</tbody>
+</table>
+<button ui-sref="home.main.appointment">+</button>
+</section>

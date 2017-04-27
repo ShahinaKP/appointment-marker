@@ -1,0 +1,20 @@
+.appointmentForm {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    padding-bottom: 20px;
+    label,
+    input {
+      flex-grow: 1;
+      width: 50%;
+    }
+  }
+}
+
+.validation-error {
+  font-size: 10px;
+  margin: 5px 0;
+  color: $validation-error;
+  text-align: right;
+}

@@ -3,11 +3,13 @@ Filename: _variables.scss
 Description:
     - Variables used: colors, fonts, font-sizes.
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 //colors
 $header-text: #000;
 $header-border: #e3e3e3;
 $footer-background: #1e1e1e;
 $footer-text: #444;
+$validation-error: #ff0000;
 //fonts
 $master-font: 'ProximaNova-Regular';
 // font size
